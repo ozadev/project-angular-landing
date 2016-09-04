@@ -1,0 +1,208 @@
+<!-- Home section (bg image, title, button) -->
+<section id="home" class="home-bg" anchor-section>
+    <div class="home-container container">
+        <p class="home-title">We make websites</p>
+        <a class="btn home-btn" href="#/#portfolio" link-id-scroll>Start tour</a>
+    </div>
+</section>
+<!-- Services section -->
+<section id="services" anchor-section>
+    <div class="light-bg section-offset-top section-offset-bottom">
+        <div class="container" ng-controller="servicesSwitchCtrl" ng-switch on="serviceCurr">
+            <div class="row">
+                <div class="services-item col-xs-12 col-sm-3">
+                    <img class="services-item-icon" src="img/service_icon1.png" ng-click="serviceSelect(0)">
+                    <h2>Web design</h2>
+                    <div class="service-item-decoration" ng-class="{'service-item-decoration-active': isActiveService(0)}"></div>
+                </div>
+                <div class="services-item col-xs-12 col-sm-3">
+                    <img class="services-item-icon" src="img/service_icon2.png" ng-click="serviceSelect(1)">
+                    <h2>Graphic design</h2>
+                    <div class="service-item-decoration" ng-class="{'service-item-decoration-active': isActiveService(1)}"></div>
+                </div>
+                <div class="services-item col-xs-12 col-sm-3">
+                    <img class="services-item-icon" src="img/service_icon3.png" ng-click="serviceSelect(2)">
+                    <h2>Programming</h2>
+                    <div class="service-item-decoration" ng-class="{'service-item-decoration-active': isActiveService(2)}"></div>
+                </div>
+                <div class="services-item col-xs-12 col-sm-3">
+                    <img class="services-item-icon" src="img/service_icon4.png" ng-click="serviceSelect(3)">
+                    <h2>Photography</h2>
+                    <div class="service-item-decoration" ng-class="{'service-item-decoration-active': isActiveService(3)}"></div>
+                </div>
+            </div>
+            <div class="row">
+                <hr class="service-list-decoration">
+                <p class="service-description col-xs-12 col-sm-10 col-sm-offset-1" ng-switch-when="0">Web design is non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+                </p>
+                <p class="service-description col-xs-12 col-sm-10 col-sm-offset-1" ng-switch-when="1">Graphic design is suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.
+                </p>
+                <p class="service-description col-xs-12 col-sm-10 col-sm-offset-1" ng-switch-when="2">Programming is non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.
+                </p>
+                <p class="service-description col-xs-12 col-sm-10 col-sm-offset-1" ng-switch-when="3">Photography aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellen tesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt ni dictum porta.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="light-bg light-bg-tone">
+        <div class="container">
+            <div class="row">
+                <ul class="col-xs-12 col-sm-10 col-sm-offset-1 responsivity-panel">
+                    <li class="responsivity-panel-item btn panel-item-left">Start tour</li>
+                    <li class="responsivity-panel-item btn panel-item-right panel-item-selected">For all devices</li>
+                </ul>
+            </div>
+            <div class="row responsivity-content-container">
+                <div class="col-xs-12 col-sm-6 pull-right responsivity-content">
+                    <h1>Fully Responsive</h1>
+                    <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta.
+                    </p>
+                    <a class="btn responsivity-btn" href="#/#contact" link-id-scroll>Get now</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 pull-left responsivity-content-img">
+                    <img src="img/phones.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio section -->
+<section id="portfolio" anchor-section ng-controller="portfolioCtrl">
+    <div class="light-bg">
+        <div class="container">
+            <div class="title-content">
+                <h1>Our Portfolio</h1>
+                <hr>
+                <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta.
+                </p>
+            </div>
+            <div class="portfolio-nav">
+                <ul>
+                    <li ng-repeat="item in test" ng-class="{'active': isActiveCategory(item)}" ng-click="galleryCategorySelect(item)">{{item}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="portfolio-images clearfix">
+            <ul>
+                <li ng-repeat="data in imagesData | filter : filterByCategory">
+                    <a href="javascript:void(0)">
+                        <img ng-src={{data.src}}>
+                        <div class="image-mask">
+                            <span>
+                                <span class="image-mask-title">{{data.name}}</span>
+                                <span class="image-mask-category">{{data.category}}</span>
+                            </span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="dark-bg">
+        <div class="container">
+            <div class="row portfolio-achievements-container">
+                <div class="col-xs-12 col-sm-3" ng-repeat="item in achievementsData">
+                    <div class="portfolio-achievement">
+                        <img ng-src={{item.iconSrc}}>
+                        <span class="achievement-number" on-screen-counter value={{item.value}} time="3000" interval="80">0</span>
+                        <h2>{{item.text}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About section -->
+<section id="about" anchor-section ng-controller="aboutTeamCtrl">
+    <div class="light-bg">
+        <div class="container">
+            <div class="title-content">
+                <h1>We are the one</h1>
+                <hr>
+                <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta.
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="personData in teamMembersData">
+                    <team-member person-data="personData"></team-member>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- News section -->
+<section id="news" anchor-section ng-controller="newsSectionCtrl">
+    <div class="light-bg section-offset-bottom">
+        <div class="container">
+            <div class="title-content">
+                <h1>Check out news</h1>
+                <hr>
+                <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta.
+                </p>
+            </div>
+            <div class="row">
+                <div class="news-item col-xs-12 col-sm-10 col-sm-offset-1" ng-repeat="item in newsData">
+                    <div class="containter">
+                        <div class="news-item-date col-xs-5 col-sm-3 col-md-2">
+                            <span class="date-num">{{getArticleDate(item.date)}}</span>
+                            <p>{{getArticleMonthStr(item.date)}}</p>
+                        </div>
+                        <div class="news-item-content col-xs-7 col-sm-9 col-md-10">
+                            <p>{{item.text}}</p>
+                            <a class="news-item-link" href="#/{{item.id}}">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact section -->
+<section id="contact" anchor-section>
+    <div class="dark-bg section-offset-bottom">
+        <div class="container">
+            <div class="title-content">
+                <h1>Contact Us</h1>
+                <hr>
+                <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta.
+                </p>
+            </div>
+            <form class="row" name="contactForm" novalidate ng-controller="contactFormCtrl" ng-submit="submitHandler(myForm.$valid)" ng-init="getMessageFromCookies()">
+                <div class="col-xs-12 col-sm-6 input-container">
+							<span class="input-border">
+								<input type="text" name="name" placeholder="Your name here" ng-model="messageName" required ng-pattern="nameRegex">
+							</span>
+                    <span class="input_error" ng-style="{'visibility': contactForm.name.$invalid && contactForm.name.$dirty ? 'visible' : 'hidden' }">{{showError(contactForm.name.$error, 'name')}}</span>
+                </div>
+                <div class="col-xs-12 col-sm-6 input-container">
+							<span class="input-border">
+								<input type="text" name="mail" placeholder="Your mail here" ng-model="messageMail" required ng-pattern="mailRegex">
+							</span>
+                    <span class="input_error" ng-style="{'visibility': contactForm.mail.$invalid && contactForm.mail.$dirty ? 'visible' : 'hidden' }">{{showError(contactForm.mail.$error, 'mail')}}</span>
+                </div>
+                <div class="col-xs-12 input-container contact-text-container">
+							<span class="input-border">
+								<input type="text" name="text" placeholder="Your message here" ng-model="messageText" required ng-pattern="textRegex">
+							</span>
+                    <span class="input_error" ng-style="{'visibility': contactForm.text.$invalid && contactForm.text.$dirty ? 'visible' : 'hidden' }">{{showError(contactForm.text.$error, 'text')}}</span>
+                </div>
+                <div class="col-xs-12 contact-button-container">
+                    <input type="submit" value="Send Message" class="btn contact-btn" ng-disabled="contactForm.$invalid">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="dart-bg dark-bg-tone">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+                    <div class="contact-info-container">
+                        <p class="contact-info-text">Awesome Address 432</p>
+                        <p class="contact-info-text">ourmail@sometype.com</p>
+                        <p class="contact-info-text">+321(0)32 123 343 492</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="landingApp">
+<head>
+	<meta charset="utf-8">
+	<title>AngularJS project (KET template)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Bootstrap grid -->
+	<link href="css/grid12.css" rel="stylesheet"/>
+	<link href="css/style.css" rel="stylesheet"/>
+	<style>
+	</style>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/angular-cookies.min.js"></script>
+	<script type="text/javascript" src="js/angular-smooth-scroll.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+	</script>
+</head> 	
+<body>
+	<!-- Fixed header (logo + navigation) -->
+	<header id="header">
+		<div class="container">
+			<div class="logo-container">
+				<a class="logo" href="#home">ket</a>
+			</div>
+			<nav class="nav-main" ng-controller="navMainCtrl">
+				<ul>
+					<li><a href="#/#home" link-id-scroll ng-class="{'nav-active': isActiveLink(['', 'home'])}">Home</a></li>
+					<li><a href="#/#services" link-id-scroll ng-class="{'nav-active': isActiveLink('services')}">Services</a></li>
+					<li><a href="#/#portfolio" link-id-scroll ng-class="{'nav-active': isActiveLink('portfolio')}">Work</a></li>
+					<li><a href="#/#about" link-id-scroll ng-class="{'nav-active': isActiveLink('about')}">About</a></li>
+					<li><a href="#/#news" link-id-scroll ng-class="{'nav-active': isActiveLink('news')}">News</a></li>
+					<li><a href="#/#contact" link-id-scroll ng-class="{'nav-active': isActiveLink('contact')}">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<ng-view></ng-view>
+	<!-- Footer -->
+	<footer>
+		<div class="dark-bg">
+			<div class="container footer-container">
+				<a class="footer-btn" href="#/#home" link-id-scroll></a>
+				<p class="footer-text">© 2016 - Ket All Rights Reserved</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

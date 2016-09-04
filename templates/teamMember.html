@@ -1,0 +1,24 @@
+<div class="team-member clearfix">
+    <div class="team-member-photo">
+        <img ng-src={{personData.imageSrc}}>
+        <div class="team-member-title">
+            <span class="team-member-name">{{personData.name}}</span>
+            <span class="team-member-position">{{personData.position}}</span>
+        </div>
+    </div>
+    <p class="team-member-description">{{personData.description}}</p>
+    <ul class="team-member-social">
+        <li class="team-member-social-icon icon-facebook">
+            <a href={{personData.socialLinks.facebook}}></a>
+        </li>
+        <li class="team-member-social-icon icon-twitter">
+            <a href={{personData.socialLinks.twitter}}></a>
+        </li>
+        <li class="team-member-social-icon icon-google">
+            <a href={{personData.socialLinks.google}}></a>
+        </li>
+        <li class="team-member-social-icon icon-dribbble">
+            <a href={{personData.socialLinks.dribble}}></a>
+        </li>
+    </ul>
+</div>

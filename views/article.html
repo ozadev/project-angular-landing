@@ -1,0 +1,19 @@
+<div class="container section-offset-top section-offset-bottom">
+    <div class="title-content">
+        <h1>News Article #{{articleId}}</h1>
+        <hr>
+    </div>
+    <div class="row">
+        <div class="news-item col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class="containter">
+                <div class="news-item-date col-xs-5 col-sm-3 col-md-2">
+                    <span class="date-num">{{getArticleDate(newsData[articleId - 1].date)}}</span>
+                    <p>{{getArticleMonthStr(newsData[articleId - 1].date)}}</p>
+                </div>
+                <div class="news-item-content col-xs-7 col-sm-9 col-md-10">
+                    <p>{{newsData[articleId - 1].text}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
